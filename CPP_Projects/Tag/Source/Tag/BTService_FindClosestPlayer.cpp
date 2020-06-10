@@ -43,7 +43,6 @@ void UBTService_FindClosestPlayer::TickNode(UBehaviorTreeComponent& OwnerComp, u
 		}
 	}
 
+	UE_LOG(LogTemp, Warning, TEXT("Min Distance to %s is %f"), *OwningAIParticipant->GetFName().ToString(), MinDistance);
 	Blackboard->SetValueAsObject(TargetActorKey.SelectedKeyName, ClosestActor);
-	UE_LOG(LogTemp, Warning, TEXT("ClosestActor: %s"), *ClosestActor->GetFName().ToString());
-	return;
 }
